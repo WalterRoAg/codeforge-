@@ -1,0 +1,20 @@
+# Auto-detect text files and normalize line endings to LF
+* text=auto
+
+# Linux / Unix shell scripts and wrappers must always use LF
+*.sh text eol=lf
+mvnw text eol=lf
+**/mvnw text eol=lf
+
+# Windows scripts must use CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.jar binary

@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: codeforge-backend
+
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/codeforge_central}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:1234}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+
+  flyway:
+    enabled: false
+
+codeforge:
+  ai:
+    proveedor: ${CODEFORGE_IA_PROVEEDOR:HIBRIDO} # HIBRIDO, LOCAL, GEMINI
+    gemini:
+      api-key: ${GEMINI_API_KEY:${GOOGLE_API_KEY:}}
+      model: ${GEMINI_MODEL:gemini-3.5-flash}
+    local:
+      url: ${OLLAMA_URL:http://localhost:11434}
+      modelo: ${OLLAMA_MODEL:qwen2.5-coder:1.5b}
+      timeout-segundos: 90

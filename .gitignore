@@ -1,0 +1,113 @@
+# ==============================================================================
+# CodeForge - Git Ignore Configuration (Monorepo)
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Environment Variables & Secrets (NEVER COMMIT)
+# ------------------------------------------------------------------------------
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+!.env.example
+
+# ------------------------------------------------------------------------------
+# Node / Angular (Frontend)
+# ------------------------------------------------------------------------------
+**/node_modules/
+**/dist/
+**/tmp/
+**/out-tsc/
+**/bazel-out/
+**/.angular/
+**/.sass-cache/
+**/coverage/
+**/typings/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+__screenshots__/
+
+# ------------------------------------------------------------------------------
+# Java / Spring Boot / Maven (Backend)
+# ------------------------------------------------------------------------------
+**/target/
+*.class
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+**/.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# ------------------------------------------------------------------------------
+# Flutter / Dart / Mobile (codeforge-movil)
+# ------------------------------------------------------------------------------
+**/.dart_tool/
+**/build/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.pub-cache/
+**/.pub/
+**/.packages
+**/doc/api/
+**/ios/Flutter/.last_build_id
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/android/.gradle/
+**/android/app/debug/
+**/android/app/profile/
+**/android/app/release/
+app.*.symbols
+app.*.map.json
+*.keystore
+*.jks
+
+# ------------------------------------------------------------------------------
+# IDEs & Code Editors
+# ------------------------------------------------------------------------------
+.idea/
+*.iml
+*.iws
+*.ipr
+.project
+.classpath
+.settings/
+.springBeans
+.sts4-cache
+.factorypath
+.c9/
+*.launch
+*.sublime-workspace
+.history/
+.agents/
+
+# VS Code specific
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/mcp.json
+
+# ------------------------------------------------------------------------------
+# Logs & System Files
+# ------------------------------------------------------------------------------
+*.log
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+[Dd]esktop.ini
